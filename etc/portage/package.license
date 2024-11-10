@@ -1,0 +1,4 @@
+sys-kernel/linux-firmware linux-fw-redistributable @BINARY-REDISTRIBUTABLE
+net-im/discord all-rights-reserved
+app-editors/cursor cursor
+net-im/wechat all-rights-reserved

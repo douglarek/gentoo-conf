@@ -1,0 +1,11 @@
+--- ./applets/weather/package/contents/ui/config/ConfigWeatherStation.qml	2024-11-05 20:35:05.000000000 +0800
++++ ConfigWeatherStation.qml	2024-11-10 11:26:46.223074944 +0800
+@@ -56,7 +56,7 @@
+                     return parseInt(text);
+                 }
+ 
+-                from: 30
++                from: 1
+                 to: 3600
+                 editable: true
+             }
