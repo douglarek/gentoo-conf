@@ -1,12 +1,22 @@
 */* CPU_FLAGS_X86: aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sha sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3 vpclmulqdq
 app-admin/keepassxc browser
-app-editors/emacs -gui
-app-text/ansifilter -gui
 app-text/hunspell l10n_en
-kde-plasma/plasma-meta -crash-handler
->=media-libs/libvpx-1.14.1 postproc # firefox
->=media-video/ffmpeg-6.1.2 vpx opus # telegram
 net-wireless/wpa_supplicant -qt5
 sys-kernel/installkernel grub dracut
-www-client/firefox l10n_zh-CN
->=x11-libs/libdrm-2.4.123-r1 video_cards_radeon # amdgpu
+www-client/chromium L10N: -* zh-CN
+www-client/firefox L10N: -* zh-CN
+
+# required by media-libs/mesa-24.2.7::gentoo[video_cards_radeonsi,-video_cards_r300,-video_cards_r600,-video_cards_radeon]
+# required by x11-drivers/xf86-video-ati-22.0.0::gentoo
+# required by x11-base/xorg-drivers-21.1-r2::gentoo[video_cards_radeonsi,-video_cards_radeon]
+# required by x11-base/xorg-server-21.1.14::gentoo[xorg]
+# required by x11-drivers/xf86-video-amdgpu-23.0.0::gentoo
+>=x11-libs/libdrm-2.4.123-r1 video_cards_radeon
+# required by net-im/telegram-desktop-5.7.2:0/0::gentoo)
+# required by @selected
+# required by @world (argument)
+>=media-video/ffmpeg-6.1.2 opus vpx
+# required by www-client/chromium-131.0.6778.33:0/stable::gentoo
+# required by @selected
+# required by @world (argument)
+>=net-libs/nodejs-22.10.0 inspector
