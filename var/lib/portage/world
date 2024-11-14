@@ -21,7 +21,6 @@ app-portage/portage-utils
 app-portage/pram
 app-shells/gentoo-zsh-completions
 app-shells/zsh
-app-text/ansifilter
 app-text/tree
 app-text/wgetpaste
 dev-lang/go
@@ -44,7 +43,6 @@ net-print/cups-filters
 net-vpn/cloudflared-bin
 sys-apps/mlocate
 sys-block/io-scheduler-udev-rules
-sys-boot/grub
 sys-fs/exfatprogs
 sys-fs/ntfs3g
 sys-fs/xfsprogs

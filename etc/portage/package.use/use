@@ -2,7 +2,8 @@
 app-admin/keepassxc browser
 app-text/hunspell l10n_en
 net-wireless/wpa_supplicant -qt5
-sys-kernel/installkernel grub dracut
+sys-apps/systemd boot
+sys-kernel/installkernel systemd-boot dracut
 www-client/chromium L10N: -* zh-CN
 www-client/firefox L10N: -* zh-CN
 
