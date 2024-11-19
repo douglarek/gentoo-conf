@@ -1,0 +1,16 @@
+iwlwifi-ty-a0-gf-a0-89.ucode
+intel/ibt-0041-0041.sfi
+amdgpu/beige_goby_sos.bin
+amdgpu/beige_goby_ta.bin
+amdgpu/beige_goby_smc.bin
+amdgpu/beige_goby_dmcub.bin
+amdgpu/beige_goby_pfp.bin
+amdgpu/beige_goby_me.bin
+amdgpu/beige_goby_ce.bin
+amdgpu/beige_goby_rlc.bin
+amdgpu/beige_goby_mec.bin
+amdgpu/beige_goby_mec2.bin
+amdgpu/beige_goby_sdma.bin
+amdgpu/beige_goby_vcn.bin
+iwlwifi-ty-a0-gf-a0.pnvm
+rtl_nic/rtl8125b-2.fw
