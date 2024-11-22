@@ -21,6 +21,7 @@ app-portage/portage-utils
 app-portage/pram
 app-shells/gentoo-zsh-completions
 app-shells/zsh
+app-text/ansifilter
 app-text/tree
 app-text/wgetpaste
 dev-lang/go
