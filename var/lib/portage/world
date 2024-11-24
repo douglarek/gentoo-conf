@@ -40,8 +40,8 @@ net-im/telegram-desktop
 net-irc/konversation
 net-misc/curl
 net-misc/onedrive
-net-print/cups-filters
 net-vpn/cloudflared-bin
+net-vpn/openconnect
 sys-apps/mlocate
 sys-block/io-scheduler-udev-rules
 sys-fs/exfatprogs
