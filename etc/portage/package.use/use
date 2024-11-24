@@ -1,11 +1,11 @@
 */* CPU_FLAGS_X86: aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sha sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3 vpclmulqdq
+app-text/ansifilter -gui
 app-admin/keepassxc browser
 app-text/hunspell l10n_en
+kde-plasma/plasma-meta -crash-handler -crypt -kwallet -smart -wallpapers
 net-wireless/wpa_supplicant -qt5
-sys-apps/systemd boot
-sys-kernel/installkernel systemd-boot dracut
-www-client/chromium L10N: -* zh-CN
-www-client/firefox L10N: -* zh-CN
+sys-kernel/installkernel grub dracut
+www-client/firefox -telemetry L10N: -* zh-CN
 
 # required by media-libs/mesa-24.2.7::gentoo[video_cards_radeonsi,-video_cards_r300,-video_cards_r600,-video_cards_radeon]
 # required by x11-drivers/xf86-video-ati-22.0.0::gentoo
@@ -17,7 +17,3 @@ www-client/firefox L10N: -* zh-CN
 # required by @selected
 # required by @world (argument)
 >=media-video/ffmpeg-6.1.2 opus vpx
-# required by www-client/chromium-131.0.6778.33:0/stable::gentoo
-# required by @selected
-# required by @world (argument)
->=net-libs/nodejs-22.10.0 inspector
