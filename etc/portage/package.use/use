@@ -1,7 +1,8 @@
 */* CPU_FLAGS_X86: aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sha sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3 vpclmulqdq
 app-text/ansifilter -gui
 app-admin/keepassxc browser
-app-text/hunspell l10n_en
+app-editors/cursor L10N: -*
+app-text/hunspell L10N: -* en
 kde-plasma/plasma-meta -crash-handler -crypt -kwallet -smart -wallpapers
 net-wireless/wpa_supplicant -qt5
 sys-kernel/installkernel grub dracut
