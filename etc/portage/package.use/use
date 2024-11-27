@@ -5,8 +5,10 @@ app-editors/cursor L10N: -*
 app-text/hunspell L10N: -* en
 kde-plasma/plasma-meta -crash-handler -crypt -kwallet -smart -wallpapers
 net-wireless/wpa_supplicant -qt5
-sys-kernel/installkernel grub dracut
+sys-apps/systemd boot
+sys-kernel/installkernel systemd-boot dracut
 www-client/firefox -telemetry L10N: -* zh-CN
+www-client/firefox-bin L10N: -* zh-CN
 
 # required by media-libs/mesa-24.2.7::gentoo[video_cards_radeonsi,-video_cards_r300,-video_cards_r600,-video_cards_radeon]
 # required by x11-drivers/xf86-video-ati-22.0.0::gentoo
@@ -14,7 +16,3 @@ www-client/firefox -telemetry L10N: -* zh-CN
 # required by x11-base/xorg-server-21.1.14::gentoo[xorg]
 # required by x11-drivers/xf86-video-amdgpu-23.0.0::gentoo
 >=x11-libs/libdrm-2.4.123-r1 video_cards_radeon
-# required by net-im/telegram-desktop-5.7.2:0/0::gentoo)
-# required by @selected
-# required by @world (argument)
->=media-video/ffmpeg-6.1.2 opus vpx
