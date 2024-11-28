@@ -2,6 +2,7 @@
 app-text/ansifilter -gui
 app-admin/keepassxc browser
 app-editors/cursor L10N: -*
+app-editors/nano justify magic
 app-text/hunspell L10N: -* en
 kde-plasma/plasma-meta -crash-handler -crypt -kwallet -smart -wallpapers
 net-wireless/wpa_supplicant -qt5
