@@ -119,6 +119,9 @@ export LANGUAGE=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+if ! command -v vim &> /dev/null; then
+    alias vim='nano'
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
