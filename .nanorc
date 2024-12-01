@@ -1,2 +1,4 @@
+set autoindent
+set constantshow
 set minibar
 set nohelp
