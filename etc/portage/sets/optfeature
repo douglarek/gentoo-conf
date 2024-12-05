@@ -1,2 +1,4 @@
 # nano is good
 app-editors/nano
+# for vscode
+dev-debug/gdb

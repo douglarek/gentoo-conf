@@ -3,7 +3,7 @@ app-admin/keepassxc
 app-admin/sudo
 app-editors/cursor
 app-editors/logseq-desktop-bin
-app-editors/nano
+app-editors/vim
 app-eselect/eselect-repository
 app-i18n/fcitx-chinese-addons
 app-misc/fastfetch
@@ -20,7 +20,6 @@ dev-util/github-cli
 dev-util/pahole
 dev-util/pkgdev
 dev-vcs/git
-kde-apps/ark
 kde-apps/dolphin
 kde-apps/kgoldrunner
 kde-apps/konsole
@@ -43,4 +42,4 @@ sys-kernel/linux-firmware
 sys-kernel/modprobed-db
 sys-process/btop
 www-client/firefox-bin
-x11-misc/xsel
+x11-misc/xclip
