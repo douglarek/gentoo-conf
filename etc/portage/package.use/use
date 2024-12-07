@@ -3,8 +3,11 @@ app-text/ansifilter -gui
 app-admin/keepassxc browser
 app-editors/cursor L10N: -*
 app-editors/nano justify magic
+app-editors/vim -* terminal
+app-editors/vim-core -*
 app-text/hunspell L10N: -* en
 kde-plasma/plasma-meta -crash-handler -crypt -kwallet -smart -wallpapers
+net-misc/curl telnet
 net-wireless/wpa_supplicant -qt5
 sys-apps/systemd boot
 sys-kernel/installkernel systemd-boot dracut
