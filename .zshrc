@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$(go env GOPATH)/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -59,7 +59,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -77,19 +77,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
-
+plugins=(zsh-autosuggestions)
 autoload -U compinit promptinit
 compinit
 promptinit; prompt gentoo
 zstyle ':completion::complete:*' use-cache 1
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export GPG_TTY=$TTY
-export PATH=$HOME/bin:$HOME/.local/bin:$PATH:${HOME}/go/bin
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -117,17 +113,19 @@ export LANGUAGE=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-if ! command -v vim &> /dev/null; then
-    alias vim='nano'
-fi
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+# emerge alias
+alias eworld='sudo emerge -avuDU @world'
+alias esync='sudo emerge --sync'
+alias etime='emerge -pvuDU @world | genlop -p'
+
+
+# use mytree to replace `app-text/tree`
+mytree() {
+    local depth=${1:-2}
+    find . -maxdepth "$depth" | sed -e "s/[^-][^\/]*\// │ /g" -e "s/│ *\([^│]\)/├── \1/"
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# use mytree to replace app-text/tree
-mytree() {
-    local depth=${1:-2}
-    find . -maxdepth "$depth" | sed -e "s/[^-][^\/]*\//  │   /g" -e "s/│ *\([^│]\)/├── \1/"
-}
