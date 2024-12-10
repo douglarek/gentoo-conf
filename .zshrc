@@ -119,6 +119,7 @@ alias pbpaste='xclip -selection clipboard -o'
 alias eworld='sudo emerge -avuDU @world'
 alias esync='sudo emerge --sync'
 alias etime='emerge -pvuDU @world | genlop -p'
+alias eautoremove='sudo emerge -ac'
 
 
 # use mytree to replace `app-text/tree`
