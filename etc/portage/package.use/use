@@ -2,8 +2,8 @@
 app-admin/keepassxc browser
 app-editors/cursor L10N: -*
 app-editors/logseq-desktop-bin L10N: -* zh-CN
-app-editors/nano justify magic
 app-editors/emacs -*
+app-editors/nano justify magic
 app-editors/vim -* terminal
 app-editors/vim-core -*
 app-text/ansifilter -gui
