@@ -122,12 +122,5 @@ alias etime='emerge -pvuDU @world | genlop -p'
 alias eautoremove='sudo emerge -ac'
 alias eautoclean='sudo eclean -d distfiles'
 
-
-# use mytree to replace `app-text/tree`
-mytree() {
-    local depth=${1:-2}
-    find . -maxdepth "$depth" | sed -e "s/[^-][^\/]*\// │ /g" -e "s/│ *\([^│]\)/├── \1/"
-}
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
