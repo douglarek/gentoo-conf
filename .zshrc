@@ -120,6 +120,7 @@ alias eworld='sudo emerge -avuDU @world'
 alias esync='sudo emerge --sync'
 alias etime='emerge -pvuDU @world | genlop -p'
 alias eautoremove='sudo emerge -ac'
+alias eautoclean='sudo eclean -d distfiles'
 
 
 # use mytree to replace `app-text/tree`
