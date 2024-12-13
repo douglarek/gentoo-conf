@@ -116,9 +116,11 @@ export LANGUAGE=en_US.UTF-8
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 # emerge alias
+alias eworldi='emerge -pvuDU @world'
 alias eworld='sudo emerge -avuDU @world'
+alias eworld!='sudo emerge -vuDU @world'
 alias esync='sudo emerge --sync'
-alias etime='emerge -pvuDU @world | genlop -p'
+alias eworldtime='emerge -pvuDU @world | genlop -p'
 alias eautoremove='sudo emerge -ac'
 alias eautoclean='sudo eclean -d distfiles'
 
