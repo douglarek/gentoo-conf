@@ -9,6 +9,7 @@ app-editors/vim-core -*
 app-text/ansifilter -gui
 app-text/hunspell L10N: -* en
 kde-plasma/plasma-meta -crash-handler -crypt -kwallet -smart -wallpapers
+net-irc/weechat -spell
 net-misc/curl telnet
 net-misc/onedrive dlang_single_target_dmd-2_109 libnotify
 net-wireless/wpa_supplicant -qt5
