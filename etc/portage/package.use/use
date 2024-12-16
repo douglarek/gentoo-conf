@@ -1,4 +1,5 @@
 */* CPU_FLAGS_X86: aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sha sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3 vpclmulqdq
+*/* VIDEO_CARDS: -* amdgpu radeonsi
 app-admin/keepassxc browser
 app-editors/cursor L10N: -*
 app-editors/logseq-desktop-bin L10N: -* zh-CN
@@ -15,6 +16,7 @@ net-misc/onedrive dlang_single_target_dmd-2_109 libnotify
 net-wireless/wpa_supplicant -qt5
 sys-apps/systemd boot
 sys-kernel/installkernel systemd-boot dracut
+sys-kernel/linux-firmware savedconfig
 www-client/firefox -telemetry L10N: -* zh-CN
 www-client/firefox-bin L10N: -* zh-CN
 
