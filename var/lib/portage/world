@@ -7,6 +7,7 @@ app-editors/vim
 app-eselect/eselect-repository
 app-i18n/fcitx-chinese-addons
 app-misc/fastfetch
+app-misc/tmux
 app-portage/eix
 app-portage/genlop
 app-portage/gentoolkit
@@ -27,7 +28,7 @@ kde-plasma/plasma-meta
 media-fonts/cascadia-code
 media-gfx/flameshot
 net-im/telegram-desktop-bin
-net-irc/konversation
+net-irc/weechat
 net-misc/onedrive
 net-vpn/cloudflared-bin
 net-vpn/openconnect
