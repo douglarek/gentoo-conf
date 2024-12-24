@@ -18,7 +18,6 @@ app-text/ansifilter
 app-text/wgetpaste
 dev-lang/go
 dev-util/github-cli
-dev-util/pahole
 dev-util/pkgdev
 dev-vcs/git
 kde-apps/dolphin
@@ -32,15 +31,16 @@ net-irc/weechat
 net-misc/onedrive
 net-vpn/cloudflared-bin
 net-vpn/openconnect
+net-wireless/iwd
 sys-apps/mlocate
 sys-block/io-scheduler-udev-rules
 sys-fs/exfatprogs
 sys-fs/ntfs3g
 sys-fs/xfsprogs
-sys-kernel/gentoo-kernel
 sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-kernel/modprobed-db
+sys-kernel/vanilla-kernel
 sys-process/btop
 www-client/firefox-bin
 x11-misc/xclip
