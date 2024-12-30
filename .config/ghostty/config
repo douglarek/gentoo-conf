@@ -1,0 +1,10 @@
+font-family = Cascadia Code NF
+font-size = 11
+theme = Breath
+mouse-hide-while-typing = true
+keybind = global:super+shift+t=toggle_quick_terminal
+window-height = 10000
+window-width = 10000
+shell-integration-features = no-cursor,sudo
+gtk-titlebar = false
+auto-update = off
