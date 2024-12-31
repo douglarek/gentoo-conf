@@ -121,8 +121,11 @@ alias eworld='sudo emerge -avuDU @world'
 alias eworld!='sudo emerge -vuDU @world'
 alias esync='sudo emerge --sync'
 alias eworldtime='emerge -pvuDU @world | genlop -p'
+alias eautoremovei='emerge -pc'
 alias eautoremove='sudo emerge -ac'
-alias eautoclean='sudo eclean -d distfiles'
+alias eautoremove!='sudo emerge -c'
+alias eautoclean='eclean -pd distfiles'
+alias eautoclean!='sudo eclean -d distfiles'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
