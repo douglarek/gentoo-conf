@@ -3,7 +3,6 @@ app-admin/keepassxc
 app-admin/sudo
 app-editors/cursor
 app-editors/logseq-desktop-bin
-app-editors/vim
 app-eselect/eselect-repository
 app-i18n/fcitx-chinese-addons
 app-misc/fastfetch
@@ -37,10 +36,10 @@ sys-block/io-scheduler-udev-rules
 sys-fs/exfatprogs
 sys-fs/ntfs3g
 sys-fs/xfsprogs
+sys-kernel/gentoo-kernel
 sys-kernel/installkernel
 sys-kernel/linux-firmware
-sys-kernel/modprobed-db
-sys-kernel/vanilla-kernel
 sys-process/btop
 www-client/firefox-bin
+www-client/pybugz
 x11-misc/xclip
