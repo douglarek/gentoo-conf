@@ -9,15 +9,17 @@ app-editors/vim -* terminal
 app-editors/vim-core -*
 app-text/ansifilter -gui
 app-text/hunspell L10N: -* en
-kde-plasma/plasma-meta -crash-handler -crypt -kwallet -smart -wallpapers
+kde-plasma/plasma-meta -crash-handler -crypt -firewall -kwallet -qt5 -smart -wallpapers
 net-irc/weechat -spell
 net-misc/curl telnet
 net-misc/onedrive dlang_single_target_dmd-2_109 libnotify
-sys-apps/systemd boot
-sys-kernel/installkernel systemd-boot dracut
+sys-apps/systemd boot curl lzma importd
+sys-kernel/installkernel systemd-boot ugrd -dracut
+sys-kernel/gentoo-kernel savedconfig
 sys-kernel/linux-firmware savedconfig
 www-client/firefox -telemetry L10N: -* zh-CN
 www-client/firefox-bin L10N: -* zh-CN
+x11-terms/ghostty -adwaita
 
 # required by media-libs/mesa-24.2.7::gentoo[video_cards_radeonsi,-video_cards_r300,-video_cards_r600,-video_cards_radeon]
 # required by x11-drivers/xf86-video-ati-22.0.0::gentoo
