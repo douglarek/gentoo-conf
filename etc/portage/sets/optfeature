@@ -1,2 +1,5 @@
 # for vscode
 dev-debug/gdb
+dev-go/delve
+# jdk
+dev-java/openjdk
