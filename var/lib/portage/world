@@ -31,7 +31,6 @@ net-misc/onedrive
 net-vpn/cloudflared-bin
 net-vpn/openconnect
 net-wireless/iwd
-sys-apps/mlocate
 sys-block/io-scheduler-udev-rules
 sys-fs/exfatprogs
 sys-fs/ntfs3g
@@ -41,5 +40,7 @@ sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-process/btop
 www-client/firefox-bin
+www-client/google-chrome
 www-client/pybugz
+x11-apps/xlsclients
 x11-misc/xclip
