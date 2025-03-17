@@ -24,7 +24,6 @@ kde-apps/kgoldrunner
 kde-apps/konsole
 kde-plasma/plasma-meta
 media-fonts/cascadia-code
-media-gfx/flameshot
 net-im/telegram-desktop-bin
 net-irc/konversation
 net-misc/onedrive
@@ -39,6 +38,5 @@ sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-process/btop
 www-client/firefox-bin
-www-client/pybugz
 x11-apps/xlsclients
 x11-misc/xclip
