@@ -2,3 +2,6 @@ sys-kernel/linux-firmware linux-fw-redistributable @BINARY-REDISTRIBUTABLE
 net-im/discord all-rights-reserved
 app-editors/cursor cursor
 net-im/wechat all-rights-reserved
+www-client/google-chrome google-chrome
+app-editors/vscode Microsoft-vscode
+dev-util/idea-community codehaus-classworlds
