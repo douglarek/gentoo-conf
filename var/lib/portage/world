@@ -2,7 +2,7 @@ app-admin/eclean-kernel
 app-admin/keepassxc
 app-admin/sudo
 app-editors/cursor
-app-editors/logseq-desktop-bin
+app-editors/vscode
 app-eselect/eselect-repository
 app-i18n/fcitx-chinese-addons
 app-misc/fastfetch
@@ -27,6 +27,7 @@ media-fonts/cascadia-code
 net-im/telegram-desktop-bin
 net-irc/konversation
 net-misc/onedrive
+net-p2p/qbittorrent
 net-vpn/cloudflared-bin
 net-wireless/iwd
 sys-block/io-scheduler-udev-rules
