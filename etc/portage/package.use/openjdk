@@ -1,2 +1,0 @@
-dev-java/openjdk headless-awt -alsa -cups
-dev-java/openjdk-bin headless-awt -alsa -cups

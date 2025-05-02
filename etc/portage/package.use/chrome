@@ -1,1 +1,1 @@
-www-client/google-chrome -qt5 -qt6 -l10n_* l10n_zh-CN
+www-client/google-chrome -l10n_* l10n_zh-CN
