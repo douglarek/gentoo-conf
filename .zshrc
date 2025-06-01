@@ -110,7 +110,9 @@ export LANGUAGE=en_US.UTF-8
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
+# https://superuser.com/questions/1514569/how-to-expand-aliases-inline-in-zsh
+bindkey "^Xa" _expand_alias # bind C-x a to expand alias
+#zstyle ':completion:*' completer _expand_alias _complete _ignored # expand alias just with TAB
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -127,6 +129,12 @@ alias eautoremove='sudo emerge -ac'
 alias eautoremove!='sudo emerge -c'
 alias eautoclean='eclean -pd distfiles'
 alias eautoclean!='sudo eclean -d distfiles'
+
+# vscode The terminal process "/usr/bin/zsh" terminated with exit code: 130.
+export TMOUT=0
+
+# https://wiki.gentoo.org/wiki/Node.js
+export NPM_CONFIG_PREFIX="$HOME/.local"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
