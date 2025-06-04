@@ -1,7 +1,9 @@
 # for vscode
 dev-debug/gdb
 dev-go/delve
+dev-go/staticcheck::passtime
+dev-go/gotests::passtime
+# go packaging
+dev-go/go-licenses
 # python
 dev-python/uv
-# mcp
-net-libs/nodejs
