@@ -127,6 +127,7 @@ alias eworldtime='emerge -pvuDU @world | genlop -p'
 alias eautoremovei='emerge -pc'
 alias eautoremove='sudo emerge -ac'
 alias eautoremove!='sudo emerge -c'
+alias epurge!='sudo emerge -c; sudo eclean -d distfiles'
 alias eautoclean='eclean -pd distfiles'
 alias eautoclean!='sudo eclean -d distfiles'
 
