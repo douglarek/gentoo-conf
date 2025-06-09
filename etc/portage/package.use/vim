@@ -1,2 +1,2 @@
-app-editors/vim -* terminal
+app-editors/vim -* X terminal
 app-editors/vim-core -*
