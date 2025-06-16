@@ -1,3 +1,5 @@
->=llvm-core/llvm-20
->=llvm-core/llvm-common-20
->=llvm-core/llvmgold-20
+>=llvm-core/llvm-21
+>=llvm-core/llvm-common-21
+>=llvm-core/llvmgold-21
+>=llvm-core/clang-common-21
+>=llvm-runtimes/openmp-21
