@@ -6,3 +6,6 @@ www-client/google-chrome google-chrome
 app-editors/vscode Microsoft-vscode
 dev-util/idea-community codehaus-classworlds
 www-client/chromium unRAR
+dev-util/android-studio android
+dev-util/claude-code all-rights-reserved
+
