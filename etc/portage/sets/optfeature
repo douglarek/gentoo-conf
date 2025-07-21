@@ -7,7 +7,7 @@ dev-go/gotests::passtime
 dev-go/go-licenses
 # python
 dev-python/uv
-# ai agent
+# ai agents
 app-misc/opencode-bin::passtime
 # nodejs for agents
 net-libs/nodejs

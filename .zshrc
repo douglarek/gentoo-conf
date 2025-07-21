@@ -135,7 +135,12 @@ alias eautoclean!='sudo eclean -d distfiles'
 export TMOUT=0
 
 # https://wiki.gentoo.org/wiki/Node.js
-export NPM_CONFIG_PREFIX="$HOME/.local"
+export NPM_CONFIG_PREFIX="$HOME/.local/nodejs"
+export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
+
+# bun.js
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
