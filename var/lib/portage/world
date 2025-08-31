@@ -14,7 +14,7 @@ app-shells/gentoo-zsh-completions
 app-shells/zsh
 app-text/ansifilter
 app-text/wgetpaste
-dev-lang/go
+dev-python/fonttools
 dev-util/github-cli
 dev-util/pkgdev
 dev-vcs/git
@@ -25,10 +25,8 @@ kde-plasma/plasma-meta
 media-fonts/cascadia-code
 net-im/telegram-desktop-bin
 net-irc/konversation
-net-misc/onedrive
 net-p2p/qbittorrent
-net-vpn/cloudflared-bin
-net-wireless/iwd
+net-wireless/iwgtk
 sys-block/io-scheduler-udev-rules
 sys-fs/exfatprogs
 sys-fs/ntfs3g
@@ -37,6 +35,7 @@ sys-kernel/gentoo-kernel-bin
 sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-process/btop
+www-apps/hugo
 www-client/firefox-bin
 x11-apps/xlsclients
 x11-misc/xclip
