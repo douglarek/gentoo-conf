@@ -77,7 +77,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions golang)
+plugins=(zsh-autosuggestions git golang)
 autoload -U compinit promptinit
 compinit
 promptinit; prompt gentoo
@@ -130,6 +130,12 @@ alias eautoremove!='sudo emerge -c'
 alias epurge!='sudo emerge -c; sudo eclean -d distfiles'
 alias eautoclean='eclean -pd distfiles'
 alias eautoclean!='sudo eclean -d distfiles'
+# Set vim alias: prefer vim, fallback to nvim if vim is not available
+if command -v vim >/dev/null 2>&1; then
+    alias vim='vim'
+elif command -v nvim >/dev/null 2>&1; then
+    alias vim='nvim'
+fi
 
 # vscode The terminal process "/usr/bin/zsh" terminated with exit code: 130.
 export TMOUT=0
@@ -141,6 +147,10 @@ export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
 # bun.js
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# crush or other agents
+## aws bedrock
+export AWS_PROFILE=default
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
