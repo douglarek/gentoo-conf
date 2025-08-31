@@ -1,15 +1,15 @@
 # for vscode
 dev-debug/gdb
+dev-go/gopls
 dev-go/delve
 dev-go/staticcheck::passtime
 dev-go/gotests::passtime
-# go packaging
-dev-go/go-licenses
-# python
-dev-python/uv
-# ai agents
-app-misc/opencode-bin::passtime
-# nodejs for agents
-net-libs/nodejs
-# blog
-www-apps/hugo
+# ai
+app-misc/jq
+app-misc/crush::passtime
+app-misc/claude-code::passtime
+app-misc/gemini-cli::passtime
+app-misc/qwen-code::passtime
+# common
+net-misc/onedrive::passtime
+app-editors/neovim-bin::passtime
