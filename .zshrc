@@ -119,17 +119,12 @@ bindkey "^Xa" _expand_alias # bind C-x a to expand alias
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 # emerge alias
-alias eworldi='emerge -pvuDU @world'
 alias eworld='sudo emerge -avuDU @world'
 alias eworld!='sudo emerge -vuDU @world'
 alias esync='sudo emerge --sync'
-alias eworldtime='emerge -pvuDU @world | genlop -p'
-alias eautoremovei='emerge -pc'
-alias eautoremove='sudo emerge -ac'
-alias eautoremove!='sudo emerge -c'
+alias etime='emerge -pvuDU @world | genlop -p'
+alias epurge='emerge -pc; eclean -pd distfiles'
 alias epurge!='sudo emerge -c; sudo eclean -d distfiles'
-alias eautoclean='eclean -pd distfiles'
-alias eautoclean!='sudo eclean -d distfiles'
 # Set vim alias: prefer vim, fallback to nvim if vim is not available
 if command -v vim >/dev/null 2>&1; then
     alias vim='vim'
