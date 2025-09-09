@@ -14,18 +14,18 @@ vim.keymap.set('n', '<Right>', nop, { noremap = true })
 
 -- Function to trim trailing whitespace
 local function trim_whitespace()
-	local save = vim.fn.winsaveview()
-	vim.cmd('keeppatterns %s/\\s\\+$//e')
-	vim.fn.winrestview(save)
+  local save = vim.fn.winsaveview()
+  vim.cmd('keeppatterns %s/\\s\\+$//e')
+  vim.fn.winrestview(save)
 end
 
 -- Auto-trim whitespace on save for non-binary files
 vim.api.nvim_create_autocmd('BufWritePre', {
-	callback = function()
-		if not vim.bo.binary then
-			trim_whitespace()
-		end
-	end,
+  callback = function()
+    if not vim.bo.binary then
+      trim_whitespace()
+    end
+  end,
 })
 
 -- Disable providers
@@ -36,37 +36,37 @@ vim.g.loaded_ruby_provider = 0
 
 -- Improve tmux status
 if vim.env.TMUX then
-	local tmux_group = vim.api.nvim_create_augroup('tmux_vim_status', { clear = true })
-	vim.api.nvim_create_autocmd('VimResume', {
-		group = tmux_group,
-		callback = function()
-			vim.fn.system('tmux set status off')
-		end,
-	})
-	vim.api.nvim_create_autocmd('VimEnter', {
-		group = tmux_group,
-		callback = function()
-			vim.fn.system('tmux set status off')
-		end,
-	})
-	vim.api.nvim_create_autocmd('VimLeave', {
-		group = tmux_group,
-		callback = function()
-			vim.fn.system('tmux set status on')
-		end,
-	})
-	vim.api.nvim_create_autocmd('VimSuspend', {
-		group = tmux_group,
-		callback = function()
-			vim.fn.system('tmux set status on')
-		end,
-	})
+  local tmux_group = vim.api.nvim_create_augroup('tmux_vim_status', { clear = true })
+  vim.api.nvim_create_autocmd('VimResume', {
+    group = tmux_group,
+    callback = function()
+      vim.fn.system('tmux set status off')
+    end,
+  })
+  vim.api.nvim_create_autocmd('VimEnter', {
+    group = tmux_group,
+    callback = function()
+      vim.fn.system('tmux set status off')
+    end,
+  })
+  vim.api.nvim_create_autocmd('VimLeave', {
+    group = tmux_group,
+    callback = function()
+      vim.fn.system('tmux set status on')
+    end,
+  })
+  vim.api.nvim_create_autocmd('VimSuspend', {
+    group = tmux_group,
+    callback = function()
+      vim.fn.system('tmux set status on')
+    end,
+  })
 end
 
 -- neovim 0.12+ built-in pack
 vim.pack.add({
-	'https://github.com/gentoo/gentoo-syntax',
-	'https://github.com/MunifTanjim/nui.nvim',
-	'https://github.com/m4xshen/hardtime.nvim',
+  'https://github.com/gentoo/gentoo-syntax',
+  'https://github.com/MunifTanjim/nui.nvim',
+  'https://github.com/m4xshen/hardtime.nvim',
 })
 require("hardtime").setup( { restriction_mode = "hint" })
