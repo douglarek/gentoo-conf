@@ -63,7 +63,10 @@ if vim.env.TMUX then
 	})
 end
 
--- Init lazy.nvim
-require("config.lazy")
-
-
+-- neovim 0.12+ built-in pack
+vim.pack.add({
+	'https://github.com/gentoo/gentoo-syntax',
+	'https://github.com/MunifTanjim/nui.nvim',
+	'https://github.com/m4xshen/hardtime.nvim',
+})
+require("hardtime").setup( { restriction_mode = "hint" })
