@@ -1,3 +1,0 @@
->=llvm-core/llvm-21
->=llvm-core/llvm-common-21
->=llvm-core/llvmgold-21
