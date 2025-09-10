@@ -1,0 +1,29 @@
+[alias]
+	ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
+[color]
+	ui = auto
+[commit]
+	gpgsign = true
+[core]
+	quotepath = false
+[credential]
+	helper = cache --timeout 30000
+	helper = store --file ~/.git-credentials
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[http]
+	postBuffer = 524288000
+[include]
+	path = ~/.kitty.gitconfig
+[init]
+	defaultBranch = master
+[pull]
+	ff = only
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[user]
+	email = douglarek@gmail.com
+	name = Leo Douglas
+	signingkey = 83C179710011FC18!
