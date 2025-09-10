@@ -4,7 +4,6 @@ app-editors/vscode
 app-eselect/eselect-repository
 app-i18n/fcitx-chinese-addons
 app-misc/fastfetch
-app-misc/tmux
 app-portage/eix
 app-portage/genlop
 app-portage/gentoolkit
@@ -19,7 +18,6 @@ dev-util/pkgdev
 dev-vcs/git
 kde-apps/dolphin
 kde-apps/kgoldrunner
-kde-apps/konsole
 kde-plasma/plasma-meta
 media-fonts/cascadia-code
 net-im/telegram-desktop-bin
@@ -38,3 +36,4 @@ www-apps/hugo
 www-client/firefox-bin
 x11-apps/xlsclients
 x11-misc/xclip
+x11-terms/kitty
