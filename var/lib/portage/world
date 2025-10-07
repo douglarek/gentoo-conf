@@ -1,5 +1,7 @@
 app-admin/eclean-kernel
 app-admin/sudo
+app-containers/docker
+app-containers/docker-cli
 app-editors/vscode
 app-eselect/eselect-repository
 app-i18n/fcitx-chinese-addons
@@ -7,6 +9,7 @@ app-misc/fastfetch
 app-portage/eix
 app-portage/genlop
 app-portage/gentoolkit
+app-portage/pfl
 app-portage/portage-utils
 app-shells/gentoo-zsh-completions
 app-shells/zsh
