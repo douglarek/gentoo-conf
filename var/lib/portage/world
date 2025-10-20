@@ -26,6 +26,7 @@ media-fonts/cascadia-code
 net-im/telegram-desktop-bin
 net-irc/konversation
 net-p2p/qbittorrent
+net-vpn/wireguard-tools
 net-wireless/iwgtk
 sys-block/io-scheduler-udev-rules
 sys-fs/exfatprogs

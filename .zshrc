@@ -123,8 +123,8 @@ alias eworld='sudo emerge -avuDU @world'
 alias eworld!='sudo emerge -vuDU @world'
 alias esync='sudo emerge --sync'
 alias etime='emerge -pvuDU @world | genlop -p'
-alias epurge='emerge -pc; eclean -pd distfiles'
-alias epurge!='sudo emerge -c; sudo eclean -d distfiles'
+alias epurge='emerge -pc; eclean -pd distfiles; eclean -pd packages'
+alias epurge!='sudo emerge -c; sudo eclean -d distfiles; sudo eclean -d packages'
 # Set vim alias: prefer vim, fallback to nvim if vim is not available
 if command -v vim >/dev/null 2>&1; then
     alias vim='vim'
