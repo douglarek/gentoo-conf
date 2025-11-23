@@ -6,10 +6,11 @@ dev-go/staticcheck::passtime
 dev-go/gotests::passtime
 # ai
 app-misc/jq
-app-misc/crush::passtime
-app-misc/claude-code::passtime
-app-misc/gemini-cli::passtime
-app-misc/qwen-code::passtime
+net-libs/nodejs
 # common
 net-misc/onedrive::passtime
 app-editors/neovim-bin::passtime
+# java
+dev-java/openjdk-bin
+# grep compatible
+sys-apps/ugrep
