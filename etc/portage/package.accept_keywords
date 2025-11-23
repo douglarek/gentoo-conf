@@ -1,0 +1,7 @@
+# remove when next glic stable released
+sys-libs/glibc ~amd64
+net-im/telegram-desktop-bin ~amd64
+
+# for passtime overlay
+*/*::passtime ~amd64
+app-editors/neovim-bin::passtime **
