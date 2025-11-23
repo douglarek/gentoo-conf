@@ -1,4 +1,0 @@
-x11-terms/ghostty -adwaita
-# required by x11-terms/ghostty-1.1.3::gentoo
-# required by ghostty (argument)
->=media-libs/freetype-2.13.3 harfbuzz
