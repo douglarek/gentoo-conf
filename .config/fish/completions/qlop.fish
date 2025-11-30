@@ -28,4 +28,4 @@ complete -c qlop -s w -l atoms -d 'Read package atoms to report from file' -r -F
 complete -c qlop -s F -l format -d 'Print matched atom using given format string' -x
 
 # Package name completion
-complete -c qlop -f -a '(__fish_gentoo_packages_available)'
+complete -c qlop -f -a '(__gentoo_packages_available)'

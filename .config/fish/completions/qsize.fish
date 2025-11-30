@@ -20,4 +20,4 @@ complete -c qsize -s i -l ignore -d 'Ignore regexp string' -x
 complete -c qsize -s F -l format -d 'Print matched atom using given format string' -x
 
 # Package name completion
-complete -c qsize -f -a '(__fish_gentoo_packages_installed)'
+complete -c qsize -f -a '(__gentoo_packages_installed)'

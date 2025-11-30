@@ -22,4 +22,4 @@ complete -c qmerge -s O -l nodeps -d "Don't merge dependencies"
 complete -c qmerge -l debug -d 'Run shell funcs with set -x'
 
 # Package name completion
-complete -c qmerge -f -a '(__fish_gentoo_packages_available)'
+complete -c qmerge -f -a '(__gentoo_packages_available)'

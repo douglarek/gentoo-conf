@@ -24,4 +24,4 @@ complete -c qlist -s s -l sym -d 'Only show symlinks'
 complete -c qlist -s F -l format -d 'Print matched atom using given format string' -x
 
 # Package name completion
-complete -c qlist -f -a '(__fish_gentoo_packages_installed)'
+complete -c qlist -f -a '(__gentoo_packages_installed)'

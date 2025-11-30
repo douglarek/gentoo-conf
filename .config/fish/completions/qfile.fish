@@ -18,4 +18,4 @@ complete -c qfile -s o -l orphans -d 'List orphan files'
 complete -c qfile -s x -l exclude -d "Don't look in package (used with --orphans)" -x
 
 # Package name completion
-complete -c qfile -f -a '(__fish_gentoo_packages_installed)'
+complete -c qfile -f -a '(__gentoo_packages_installed)'

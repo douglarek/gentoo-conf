@@ -1,6 +1,6 @@
-function __fish_gentoo_packages_available -d "Get available package names"
+function __gentoo_packages_available -d "Get available package names"
     # Fast version: only package names, no category
-    set -l repos (__fish_gentoo_repos)
+    set -l repos (__gentoo_repos)
     for repo in $repos
         set -l repo_path (portageq get_repo_path / $repo 2>/dev/null)
         test -d "$repo_path"; or continue

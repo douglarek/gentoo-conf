@@ -21,4 +21,4 @@ complete -c qcheck -s P -l skip-protected -d 'Ignore files in CONFIG_PROTECT-ed 
 complete -c qcheck -s p -l prelink -d 'Undo prelink when calculating checksums'
 
 # Package name completion
-complete -c qcheck -f -a '(__fish_gentoo_packages_installed)'
+complete -c qcheck -f -a '(__gentoo_packages_installed)'

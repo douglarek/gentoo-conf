@@ -17,4 +17,4 @@ complete -c qmanifest -s d -l dir -d 'Treat arguments as directories' -r -F
 complete -c qmanifest -s o -l overlay -d 'Treat arguments as overlay names' -x
 
 # Overlay name completion for -o option
-complete -c qmanifest -n '__fish_seen_subcommand_from -o --overlay' -f -a '(__fish_gentoo_repos_overlay)'
+complete -c qmanifest -n '__fish_seen_subcommand_from -o --overlay' -f -a '(__gentoo_repos_overlay)'

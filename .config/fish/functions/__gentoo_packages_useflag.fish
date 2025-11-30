@@ -1,5 +1,5 @@
-function __fish_gentoo_packages_useflag -d "Get USE flags"
-    set -l repos (__fish_gentoo_repos)
+function __gentoo_packages_useflag -d "Get USE flags"
+    set -l repos (__gentoo_repos)
 
     for repo in $repos
         set -l repo_path (portageq get_repo_path / $repo 2>/dev/null)

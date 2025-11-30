@@ -3,7 +3,7 @@
 # Helper function to get Gentoo architectures plus 'all'
 function __fish_ekeyword_arches
     echo all
-    __fish_gentoo_arches
+    __gentoo_arches
 end
 
 # Basic options

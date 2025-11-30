@@ -20,7 +20,7 @@ complete -c quse -s R -l repo -d 'Show repository the ebuild originates from'
 complete -c quse -s F -l format -d 'Print matched atom using given format string' -x
 
 # USE flag completion (when not using -p option)
-complete -c quse -n 'not __fish_seen_subcommand_from -p --package' -f -a '(__fish_gentoo_packages_useflag)'
+complete -c quse -n 'not __fish_seen_subcommand_from -p --package' -f -a '(__gentoo_packages_useflag)'
 
 # Package name completion (for -p option)
-complete -c quse -n '__fish_seen_subcommand_from -p --package' -f -a '(__fish_gentoo_packages_available)'
+complete -c quse -n '__fish_seen_subcommand_from -p --package' -f -a '(__gentoo_packages_available)'

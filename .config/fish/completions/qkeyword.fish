@@ -21,7 +21,7 @@ complete -c qkeyword -s a -l all -d 'List packages keyworded for given arch'
 complete -c qkeyword -s n -l not -d "List packages that aren't keyworded on a given arch"
 
 # Architecture completion
-complete -c qkeyword -f -a '(__fish_gentoo_arches)'
+complete -c qkeyword -f -a '(__gentoo_arches)'
 
 # Category completion for -c option
-complete -c qkeyword -n '__fish_seen_subcommand_from -c --matchcat' -f -a '(__fish_gentoo_packages_category)'
+complete -c qkeyword -n '__fish_seen_subcommand_from -c --matchcat' -f -a '(__gentoo_packages_category)'

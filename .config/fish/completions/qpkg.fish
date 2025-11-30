@@ -16,4 +16,4 @@ complete -c qpkg -s p -l pretend -d 'Pretend only'
 complete -c qpkg -s P -l pkgdir -d 'Alternate package directory' -r -F
 
 # Package name completion (with versions)
-complete -c qpkg -f -a '(__fish_gentoo_packages_installed_versions)'
+complete -c qpkg -f -a '(__gentoo_packages_installed_versions)'

@@ -21,4 +21,4 @@ complete -c qdepends -s F -l format -d 'Print matched atom using given format st
 complete -c qdepends -s S -l pretty -d 'Pretty format specified depend strings'
 
 # Package name completion
-complete -c qdepends -f -a '(__fish_gentoo_packages_installed)'
+complete -c qdepends -f -a '(__gentoo_packages_installed)'
