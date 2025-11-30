@@ -1,219 +1,7 @@
-# Fish shell completions for gentoo eix and related tools
-# Comprehensive completion file based on zsh completions
+# Completion for eix (eix tools)
+# Search and query packages
 
-# Helper function to get eix variables
-function __eix_get_var
-    eix --print $argv[1] 2>/dev/null
-end
-
-# Helper function to get packages
-function __eix_get_packages
-    set -l opts --pure-packages --format '<category>/<name>\n'
-    if test "$argv[1]" = "installed"
-        set opts $opts -I
-    end
-    eix $opts 2>/dev/null
-end
-
-# Helper function to get categories
-function __eix_get_categories
-    set -l opts --pure-packages --format '<category>\n'
-    if test "$argv[1]" = "installed"
-        set opts $opts -I
-    end
-    eix $opts 2>/dev/null
-end
-
-# Helper function to get package names
-function __eix_get_names
-    set -l opts --pure-packages --format '<name>\n'
-    if test "$argv[1]" = "installed"
-        set opts $opts -I
-    end
-    eix $opts 2>/dev/null
-end
-
-# Helper function to get overlays
-function __eix_get_overlays
-    set -l overlays (__eix_get_var PORTDIR_OVERLAY | string split ' ')
-    set overlays $overlays (__eix_get_var PORTDIR)
-    for i in (seq (count $overlays))
-        echo $i
-    end
-    printf '%s\n' $overlays
-end
-
-# Helper function to get useflags
-function __eix_get_useflags
-    eix --print-all-useflags 2>/dev/null | sed 's/^[()+-]*//g'
-end
-
-# Helper function to get licenses
-function __eix_get_licenses
-    eix --print-all-licenses 2>/dev/null | sed 's/[()| ]//g'
-end
-
-# Helper function to get slots
-function __eix_get_slots
-    eix --print-all-slots 2>/dev/null
-end
-
-# Helper function to get sets
-function __eix_get_sets
-    set -l portdir (__eix_get_var PORTDIR)
-    set -l overlays (__eix_get_var PORTDIR_OVERLAY | string split ' ')
-    set -l local_sets (__eix_get_var EIX_LOCAL_SETS | string split ' ')
-
-    for setdir in $local_sets
-        if test -d "$setdir"
-            find -L "$setdir" -type f -name '[!.]*' -printf '%f\n' 2>/dev/null
-        end
-    end
-end
-
-#############################################################################
-# eix-header completions
-#############################################################################
-
-complete -c eix-header -s h -d 'Help'
-complete -c eix-header -s H -d 'Help'
-complete -c eix-header -s '?' -d 'Help'
-complete -c eix-header -s q -d 'Quiet'
-complete -c eix-header -s f -r -d 'Set database for next output' -a '*.eix'
-complete -c eix-header -s s -r -d 'Set separator for next output' -a '"#"'
-complete -c eix-header -s c -d 'Check if database is current'
-complete -c eix-header -s C -d 'Output database format version'
-complete -c eix-header -s l -r -d 'Output label' -a '0'
-complete -c eix-header -s p -r -d 'Output path' -a '0'
-complete -c eix-header -s o -r -d 'Output label and path' -a '0'
-
-#############################################################################
-# eix-installed completions
-#############################################################################
-
-complete -c eix-installed -s h -d 'Help'
-complete -c eix-installed -s '?' -d 'Help'
-complete -c eix-installed -s a -d 'Same as -q all'
-complete -c eix-installed -s q -d 'Quiet: output only packages, no text'
-complete -c eix-installed -l '=' -d 'Output packages prefixed with "="'
-
-complete -c eix-installed -x -a 'all' -d 'Output all installed packages'
-complete -c eix-installed -x -a 'repo' -d 'Output packages installed with repository information'
-complete -c eix-installed -x -a 'no-repo' -d 'Output packages installed without repository information'
-complete -c eix-installed -x -a 'buildtime' -d 'Output packages installed with buildtime information'
-complete -c eix-installed -x -a 'no-buildtime' -d 'Output packages installed without buildtime information'
-
-#############################################################################
-# eix-installed-after completions
-#############################################################################
-
-complete -c eix-installed-after -s h -d 'Help'
-complete -c eix-installed-after -s '?' -d 'Help'
-complete -c eix-installed-after -s I -d 'Include the given package in the output'
-complete -c eix-installed-after -s f -d 'Output full list of packages'
-complete -c eix-installed-after -s l -d 'Use /var/log/emerge.log to determine first install time'
-complete -c eix-installed-after -s L -r -F -d 'Use LOG to determine first install time'
-complete -c eix-installed-after -s e -r -d 'Use TIME as reference time (seconds since epoch)'
-complete -c eix-installed-after -s F -r -F -d 'Use mtime as reference time'
-complete -c eix-installed-after -s a -r -d 'Increase match for -l or -L or -e by SEC seconds'
-complete -c eix-installed-after -s A -r -d 'Decrease match for -l or -L or -e by SEC seconds'
-complete -c eix-installed-after -s b -d 'Output packages installed before (not after) the package'
-complete -c eix-installed-after -s i -d 'Ignore all previous options'
-complete -c eix-installed-after -s S -d 'Choose first matching slot'
-complete -c eix-installed-after -s V -d 'Look for category/package-version, not category/package:slot'
-complete -c eix-installed-after -s d -d 'Output installation date after package'
-complete -c eix-installed-after -s s -d 'Output slot also in case of no ambiguity'
-complete -c eix-installed-after -s v -d 'Output category/package-version, not category/package:slot'
-complete -c eix-installed-after -l '=' -d 'Output =category/package-version, not category/package:slot'
-complete -c eix-installed-after -s t -d 'Use build time independent of USE_BUILD_TIME'
-complete -c eix-installed-after -s T -d 'Never use build time independent of USE_BUILD_TIME'
-
-# Package completion for eix-installed-after
-complete -c eix-installed-after -x -a '(__eix_get_packages installed)'
-
-#############################################################################
-# eix-remote completions
-#############################################################################
-
-complete -c eix-remote -s h -d 'Help'
-complete -c eix-remote -s '?' -d 'Help'
-complete -c eix-remote -s L -d 'Print LOCAL_LAYMAN and exit'
-complete -c eix-remote -s k -d 'Keep permissions'
-complete -c eix-remote -s K -d 'Keep permissions, resistant to -i'
-complete -c eix-remote -s x -d 'Exclude local overlays which are remote'
-complete -c eix-remote -s X -d 'Exclude remote overlays which are local'
-complete -c eix-remote -s l -r -F -d 'Use PATH as LOCAL_LAYMAN'
-complete -c eix-remote -s a -r -d 'Use ADDR as remote database'
-complete -c eix-remote -s i -d 'Ignore all previous options'
-complete -c eix-remote -s v -d 'Verbose (default)'
-complete -c eix-remote -s H -d 'No status line update'
-complete -c eix-remote -s q -d 'Quiet'
-
-complete -c eix-remote -x -a 'update' -d 'Fetch eix-caches1 and add them to the eix database'
-complete -c eix-remote -x -a 'update1' -d 'Fetch eix-caches1 and add them to the eix database'
-complete -c eix-remote -x -a 'update2' -d 'Fetch eix-caches2 and add them to the eix database'
-complete -c eix-remote -x -a 'add' -d 'Add fetched eix-caches1 to the eix database'
-complete -c eix-remote -x -a 'add1' -d 'Add fetched eix-caches1 to the eix database'
-complete -c eix-remote -x -a 'add2' -d 'Add fetched eix-caches2 to the eix database'
-complete -c eix-remote -x -a 'fetch' -d 'Fetch eix-caches1'
-complete -c eix-remote -x -a 'fetch1' -d 'Fetch eix-caches1'
-complete -c eix-remote -x -a 'fetch2' -d 'Fetch eix-caches2'
-complete -c eix-remote -x -a 'remove' -d 'Remove temporarily added virtual overlays from eix database'
-
-#############################################################################
-# eix-sync completions
-#############################################################################
-
-complete -c eix-sync -s h -d 'Help'
-complete -c eix-sync -s '?' -d 'Help'
-complete -c eix-sync -s i -d 'Ignore all previous options'
-complete -c eix-sync -s s -r -d 'Rsync from SERVER; this implies -0'
-complete -c eix-sync -s 2 -r -d 'Rsync to SERVER'
-complete -c eix-sync -s 0 -d 'No eix -sync'
-complete -c eix-sync -s U -d 'Do not touch database and omit @ hooks after eix-update'
-complete -c eix-sync -s u -d 'Update database only and show differences. Equivalent to -0l@s ""'
-complete -c eix-sync -s l -d 'Do not call layman or ! hooks'
-complete -c eix-sync -s '@' -d 'Do not execute @ or @@ hooks'
-complete -c eix-sync -s S -d 'Do not execute @ hooks after emerge --sync'
-complete -c eix-sync -s M -d 'Run emerge -metadata'
-complete -c eix-sync -s N -d 'Cancel previous -M'
-complete -c eix-sync -s t -d 'Use temporary file to save current database'
-complete -c eix-sync -s T -d 'Do not measure time'
-complete -c eix-sync -s q -d 'Be quiet (close stdout)'
-complete -c eix-sync -s w -d 'Run emerge-webrsync instead of emerge --sync'
-complete -c eix-sync -s W -d 'Run emerge-delta-webrsync instead of emerge --sync'
-complete -c eix-sync -s c -r -F -d 'Run CMD instead of emerge --sync'
-complete -c eix-sync -s C -r -d 'Add OPT to emerge --sync'
-complete -c eix-sync -s o -r -d 'Add OPT to eix-update'
-complete -c eix-sync -s L -r -d 'Add OPT to layman'
-complete -c eix-sync -s r -d 'Clear /var/cache/edb/dep/* before syncing'
-complete -c eix-sync -s R -d 'Cancel previous -r'
-complete -c eix-sync -s v -d 'Verbose'
-complete -c eix-sync -s n -d 'Dry run; combine with -v'
-complete -c eix-sync -s H -d 'No status line update'
-
-#############################################################################
-# eix-test-obsolete completions
-#############################################################################
-
-complete -c eix-test-obsolete -s h -d 'Help'
-complete -c eix-test-obsolete -s '?' -d 'Help'
-complete -c eix-test-obsolete -s c -d 'Use CHECK_INSTALLED_OVERLAYS=true'
-complete -c eix-test-obsolete -s C -d 'Use CHECK_INSTALLED_OVERLAYS=repository'
-complete -c eix-test-obsolete -s d -d 'Instead of argument "detail"'
-complete -c eix-test-obsolete -s b -d 'Instead of argument "brief"'
-complete -c eix-test-obsolete -s q -d 'Instead of argument "quick"'
-complete -c eix-test-obsolete -s H -d 'No status line update'
-
-complete -c eix-test-obsolete -x -a 'detail' -d 'Slow and very detailed output of redundant packages'
-complete -c eix-test-obsolete -x -a 'brief' -d 'Normal output of redundant packages'
-complete -c eix-test-obsolete -x -a 'quick' -d 'Quick and rather silent output of redundant packages'
-
-#############################################################################
-# Main eix, eix-diff, eix-update completions
-#############################################################################
-
-# Common options for all three commands
+# Common options
 complete -c eix -s h -l help -d 'Help'
 complete -c eix -s v -l version -d 'Version'
 complete -c eix -l print -r -d 'Print expanded variable value' -a '(eix --known-vars 2>/dev/null)'
@@ -227,45 +15,7 @@ complete -c eix -l care -d 'Always read slots of installed packages'
 complete -c eix -l deps-installed -d 'Always read deps of installed packages'
 complete -c eix -l ansi -d 'Reset the ansi 256 color palette'
 
-complete -c eix-diff -s h -l help -d 'Help'
-complete -c eix-diff -s v -l version -d 'Version'
-complete -c eix-diff -l print -r -d 'Print expanded variable value' -a '(eix --known-vars 2>/dev/null)'
-complete -c eix-diff -l dump -d 'Dump variables'
-complete -c eix-diff -l dump-defaults -d 'Dump default values of variables'
-complete -c eix-diff -s q -l quiet -d 'No output'
-complete -c eix-diff -s n -l nocolor -d 'Do not use colors in output'
-complete -c eix-diff -s F -l force-color -d 'Force color on non-terminal'
-complete -c eix-diff -s Q -l quick -d 'Do not try to read unguessable slots'
-complete -c eix-diff -l care -d 'Always read slots of installed packages'
-complete -c eix-diff -l deps-installed -d 'Always read deps of installed packages'
-complete -c eix-diff -l ansi -d 'Reset the ansi 256 color palette'
-
-complete -c eix-update -s h -l help -d 'Help'
-complete -c eix-update -s v -l version -d 'Version'
-complete -c eix-update -l print -r -d 'Print expanded variable value' -a '(eix --known-vars 2>/dev/null)'
-complete -c eix-update -l dump -d 'Dump variables'
-complete -c eix-update -l dump-defaults -d 'Dump default values of variables'
-complete -c eix-update -s q -l quiet -d 'No output'
-complete -c eix-update -s n -l nocolor -d 'Do not use colors in output'
-complete -c eix-update -s F -l force-color -d 'Force color on non-terminal'
-complete -c eix-update -s Q -l quick -d 'Do not try to read unguessable slots'
-complete -c eix-update -l care -d 'Always read slots of installed packages'
-complete -c eix-update -l deps-installed -d 'Always read deps of installed packages'
-complete -c eix-update -l ansi -d 'Reset the ansi 256 color palette'
-
-# eix-update specific options
-complete -c eix-update -s H -l nostatus -d 'Do not update status line'
-complete -c eix-update -l force-status -d 'Force status line on non-terminal'
-complete -c eix-update -s o -l output -r -F -d 'Output to FILE'
-complete -c eix-update -s x -l exclude-overlay -r -d 'Exclude overlay' -a '(__eix_get_overlays)'
-complete -c eix-update -s a -l add-overlay -r -F -d 'Add overlay'
-complete -c eix-update -s m -l override-method -r -d 'Override method for overlay mask' -a '(__eix_get_overlays)'
-complete -c eix-update -s r -l repo-name -r -d 'Set REPO_NAME for OVERLAY' -a '(__eix_get_overlays)'
-
-# eix-diff specific options
-complete -c eix-diff -x -a '*.eix' -d 'Old cache file'
-
-# Main eix specific options
+# Print options
 complete -c eix -l print-all-useflags -d 'Print all IUSE words'
 complete -c eix -l print-all-keywords -d 'Print all KEYWORDS words'
 complete -c eix -l print-all-slots -d 'Print all SLOT strings'
@@ -281,6 +31,8 @@ complete -c eix -l 256d -d 'Print dark ansi color palettes'
 complete -c eix -l 256d0 -d 'Print dark ansi color palette (normal)'
 complete -c eix -l 256d1 -d 'Print dark ansi color palette (bright)'
 complete -c eix -l 256b -d 'Print ansi color palette for background'
+
+# Output options
 complete -c eix -s R -l remote -d 'Use remote database 1'
 complete -c eix -s Z -l remote2 -d 'Use remote database 2'
 complete -c eix -s x -l versionsort -d 'Sort output by slots/versions'
@@ -403,7 +155,7 @@ complete -c eix -s p -l pattern -d 'Pattern is wildcard pattern'
 complete -c eix -s r -l regex -d 'Pattern is regular expression, ignoring case'
 complete -c eix -l regex-case -d 'Pattern is regular expression, using case'
 
-# Package name completion for eix (context-sensitive)
+# Package name completion (context-sensitive)
 complete -c eix -x -a '(__eix_get_packages)'
 complete -c eix -n '__fish_seen_subcommand_from -I --installed -i --multi-installed' -x -a '(__eix_get_packages installed)'
 
