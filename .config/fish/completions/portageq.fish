@@ -24,6 +24,7 @@ complete -c portageq -n '__fish_use_subcommand' -xa 'distdir' -d 'Returns DISTDI
 complete -c portageq -n '__fish_use_subcommand' -xa 'owners' -d 'Print packages that own files'
 complete -c portageq -n '__fish_use_subcommand' -xa 'get_repos' -d 'List all repositories'
 complete -c portageq -n '__fish_use_subcommand' -xa 'get_repo_path' -d 'Get repository path'
+complete -c portageq -n '__fish_use_subcommand' -xa 'repos_config' -d 'Alias for repositories_configuration command'
 
 # For commands that need root argument (most commands)
 set -l needs_root 'contents all_best_visible match metadata best_visible mass_best_visible has_version best_version mass_best_version owners'
