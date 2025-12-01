@@ -30,6 +30,7 @@ else if type -q nvim
 end
 ## emerge alias
 alias eworld='sudo emerge -avuDU @world'
+alias eworldb='sudo emerge -avuDU --with-bdeps=y @world'
 alias eworld!='sudo emerge -vuDU @world'
 alias esync='sudo emerge --sync'
 alias etime='emerge -pvuDU @world | genlop -p'
