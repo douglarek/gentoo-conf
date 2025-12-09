@@ -11,6 +11,6 @@ net-libs/nodejs
 net-misc/onedrive::passtime
 app-editors/neovim-bin::passtime
 # java
-dev-java/openjdk-bin
-# grep compatible
-sys-apps/ugrep
+dev-java/openjdk
+# fish
+app-shells/gentoo-fish-completion::passtime

@@ -9,7 +9,6 @@ app-misc/fastfetch
 app-portage/eix
 app-portage/genlop
 app-portage/gentoolkit
-app-portage/pfl
 app-portage/portage-utils
 app-shells/fish
 app-text/ansifilter
@@ -19,14 +18,12 @@ dev-util/github-cli
 dev-util/pkgdev
 dev-vcs/git
 kde-apps/dolphin
-kde-apps/kgoldrunner
+kde-apps/knights
 kde-plasma/plasma-meta
 media-fonts/cascadia-code
 net-im/telegram-desktop-bin
 net-irc/konversation
 net-p2p/qbittorrent
-net-vpn/wireguard-tools
-net-wireless/iwgtk
 sys-block/io-scheduler-udev-rules
 sys-fs/exfatprogs
 sys-fs/ntfs3g
@@ -36,7 +33,7 @@ sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-process/btop
 www-apps/hugo
-www-client/firefox-bin
+www-client/google-chrome
 x11-apps/xlsclients
 x11-misc/xclip
 x11-terms/kitty

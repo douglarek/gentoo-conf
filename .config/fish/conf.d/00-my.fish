@@ -29,11 +29,11 @@ else if type -q nvim
     alias vim='nvim'
 end
 ## emerge alias
-alias eworld='sudo emerge -avuDU @world'
-alias eworldb='sudo emerge -avuDU --with-bdeps=y @world'
-alias eworld!='sudo emerge -vuDU @world'
+alias eworld='sudo emerge -avuDN @world'
+alias eworldb='sudo emerge -avuDN --with-bdeps=y @world'
+alias eworld!='sudo emerge -vuDN @world'
 alias esync='sudo emerge --sync'
-alias etime='emerge -pvuDU @world | genlop -p'
+alias etime='emerge -pvuDN @world | genlop -p'
 alias epurge='emerge -pc; eclean -pd distfiles; eclean -pd packages'
 alias epurge!='sudo emerge -c; sudo eclean -d distfiles; sudo eclean -d packages'
 
