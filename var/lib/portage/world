@@ -33,7 +33,7 @@ sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-process/btop
 www-apps/hugo
-www-client/google-chrome
+www-client/firefox
 x11-apps/xlsclients
 x11-misc/xclip
 x11-terms/kitty
