@@ -23,7 +23,6 @@ kde-plasma/plasma-meta
 media-fonts/cascadia-code
 net-im/telegram-desktop-bin
 net-irc/konversation
-net-p2p/qbittorrent
 sys-block/io-scheduler-udev-rules
 sys-fs/exfatprogs
 sys-fs/ntfs3g
@@ -33,7 +32,7 @@ sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-process/btop
 www-apps/hugo
-www-client/firefox
+www-client/google-chrome
 x11-apps/xlsclients
 x11-misc/xclip
 x11-terms/kitty
