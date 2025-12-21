@@ -10,7 +10,5 @@ net-libs/nodejs
 # common
 net-misc/onedrive::passtime
 app-editors/neovim-bin::passtime
-# java
-dev-java/openjdk
 # fish
 app-shells/gentoo-fish-completion::passtime

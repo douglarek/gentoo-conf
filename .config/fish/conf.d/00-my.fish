@@ -8,7 +8,7 @@ set fish_greeting
 set -gx LC_ALL en_US.UTF-8
 set -gx LANG en_US.UTF-8
 set -gx LANGUAGE en_US.UTF-8
-set -gx GPG_TTY $TTY
+set -gx GPG_TTY (tty)
 set -gx TMOUT 0
 
 # add go bin path
