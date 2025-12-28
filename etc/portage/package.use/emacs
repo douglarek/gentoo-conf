@@ -1,1 +1,1 @@
-app-editors/emacs -*
+app-editors/emacs -* X acl gmp inotify ssl threads xattr xpm zlib
