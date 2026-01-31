@@ -1,7 +1,4 @@
-# remove when next glic stable released
-sys-libs/glibc ~amd64
 net-im/telegram-desktop-bin ~amd64
-dev-util/idea-community ~amd64
 app-misc/zellij ~amd64
 dev-util/intellij-idea ~amd64
 
