@@ -10,6 +10,7 @@ set -gx LANG en_US.UTF-8
 set -gx LANGUAGE en_US.UTF-8
 set -gx GPG_TTY (tty)
 set -gx TMOUT 0
+set -gx PATH "$HOME/.local/bin" $PATH
 
 # add go bin path
 if type -q go
