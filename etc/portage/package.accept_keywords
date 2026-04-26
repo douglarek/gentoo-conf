@@ -1,4 +1,12 @@
+app-admin/keepassxc ~amd64
 net-im/telegram-desktop-bin ~amd64
+# kernel
+sys-kernel/gentoo-kernel-bin ~amd64
+sys-kernel/installkernel ~amd64
+sys-kernel/linux-headers ~amd64
+sys-kernel/ugrd ~amd64
+virtual/dist-kernel ~amd64
+sys-kernel/linux-firmware ~amd64
 
 # for dlang overlay
 */*::dlang ~amd64

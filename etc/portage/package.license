@@ -1,3 +1,4 @@
 sys-kernel/linux-firmware linux-fw-redistributable @BINARY-REDISTRIBUTABLE
 www-client/google-chrome google-chrome
 app-editors/vscode Microsoft-vscode
+www-client/chromium unRAR

@@ -1,9 +1,5 @@
 # for vscode
 dev-debug/gdb
-dev-go/gopls
-dev-go/delve
-dev-go/staticcheck::passtime
-dev-go/gotests::passtime
 # ai
 app-misc/jq
 net-libs/nodejs
@@ -12,3 +8,6 @@ net-misc/onedrive::passtime
 app-editors/neovim-bin::passtime
 # fish
 app-shells/gentoo-fish-completion::passtime
+# k8s
+app-admin/helm
+sys-cluster/kubectl
